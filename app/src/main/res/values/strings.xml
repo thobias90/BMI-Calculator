@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">BMIcalculator</string>
+    <string name="app_name">BMI Calculator</string>
+    <string name="weight">Weight:</string>
+    <string name="weightHint">Weight in Kg</string>
+    <string name="height">Height:</string>
+    <string name="heightHint">Height in m</string>
+    <string name="bmi">BMI:</string>
+    <string name="calculate">Calculate</string>
+    <string name="clear">Clear</string>
+    <string name="_0_0">0.0</string>
+    <string name="weight_must_be_filled">Weight must be filled</string>
+    <string name="height_must_be_filled">Height must be filled</string>
+    <string name="clear_button">Clear button</string>
 </resources>

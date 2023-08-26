@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun btClearOnLongClick() {
-        Toast.makeText(this, "Clear button", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.clear_button), Toast.LENGTH_SHORT).show()
     }
 
     private fun btClearOnClick() {
@@ -48,16 +48,16 @@ class MainActivity : AppCompatActivity() {
         etHeight.setText("")
         etWeight.error = null
         etHeight.error = null
-        tvResult.text = "0.0"
+        tvResult.text = getString(R.string._0_0)
         etWeight.requestFocus()
     }
 
     private fun btCalculateOnClick() {
         if (etWeight.text.isEmpty()) {
-            etWeight.error = "Need to be filled"
+            etWeight.error = getString(R.string.weight_must_be_filled)
             return
         } else if (etHeight.text.isEmpty()) {
-            etHeight.error = "Need to be filled"
+            etHeight.error = getString(R.string.height_must_be_filled)
             return
         }
         val height = etHeight.text.toString().toDouble()
