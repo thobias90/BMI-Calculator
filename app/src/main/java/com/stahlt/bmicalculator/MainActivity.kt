@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.text.DecimalFormat
 import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
@@ -63,8 +64,16 @@ class MainActivity : AppCompatActivity() {
         val height = etHeight.text.toString().toDouble()
         val weight = etWeight.text.toString().toDouble()
 
-        val bmi = weight / height.pow(2.0)
+        val bmiCalculator = BMICalculator()
+        val bmi = bmiCalculator.calculate(height, weight)
 
-        tvResult.text = "%.1f".format(bmi)
+        tvResult.text = bmi
+    }
+}
+class BMICalculator() {
+    fun calculate(height: Double, weight: Double): String {
+        val bmi = weight / height.pow(2.0)
+        val df = DecimalFormat("0.0")
+        return df.format(bmi)
     }
 }
