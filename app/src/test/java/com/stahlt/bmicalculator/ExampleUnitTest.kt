@@ -11,7 +11,8 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun testBmiInterval() {
+        val bmiCalculator = BMICalculator()
+        assertTrue("BMI Check", bmiCalculator.calculate(1.9, 90.0) == "24,9")
     }
 }
